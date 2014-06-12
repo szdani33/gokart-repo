@@ -53,7 +53,7 @@
 						</goals>
 						<phase>generate-sources</phase>
 						<configuration>
-							<outputDirectory>src/generated/java</outputDirectory>
+							<outputDirectory>src/gen/java</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
