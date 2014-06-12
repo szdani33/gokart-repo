@@ -1,7 +1,9 @@
 package hu.daniels.gokart;
 
 import hu.daniels.gokart.model.Heat;
+import hu.daniels.gokart.model.Heat_;
 import hu.daniels.gokart.model.Pilot;
+import hu.daniels.gokart.model.Pilot_;
 import hu.daniels.gokart.view.HeatView;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -50,9 +52,9 @@ public class Main extends Application {
 		CriteriaQuery<Heat> query = builder.createQuery(Heat.class);
 
 		Root<Heat> heat = query.from(Heat.class);
-		Join<Heat, Pilot> pilot = heat.join("pilot");
+		Join<Heat, Pilot> pilot = heat.join(Heat_.pilot);
 
-		query.where(builder.equal(pilot.get("nickName"), "Dani"));
+		query.where(builder.equal(pilot.get(Pilot_.nickName), "Dani"));
 
 		TypedQuery<Heat> tq = em.createQuery(query);
 
