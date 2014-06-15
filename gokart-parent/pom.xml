@@ -11,6 +11,7 @@
 
 	<modules>
 		<module>../gokart-model</module>
+		<module>../gokart-service</module>
 		<module>../gokart-ui</module>
 	</modules>
 

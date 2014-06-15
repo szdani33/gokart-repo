@@ -11,7 +11,6 @@
 		<groupId>hu.daniels</groupId>
 		<artifactId>gokart-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../gokart-parent</relativePath>
 	</parent>
 
 	<properties>

@@ -2,32 +2,22 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>gokart-ui</artifactId>
+	<artifactId>gokart-service</artifactId>
 	<packaging>jar</packaging>
 
-	<name>gokart-ui</name>
-
+	<name>gokart-service</name>
+	
 	<parent>
 		<groupId>hu.daniels</groupId>
 		<artifactId>gokart-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-
-	<properties>
-		<mysql.version>5.1.31</mysql.version>
-	</properties>
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>hu.daniels</groupId>
-			<artifactId>gokart-service</artifactId>
+			<artifactId>gokart-model</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.version}</version>
 		</dependency>
 	</dependencies>
 
