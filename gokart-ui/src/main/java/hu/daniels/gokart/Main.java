@@ -9,15 +9,19 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main extends Application {
-
-	@Autowired
+	private ClassPathXmlApplicationContext context = null;
+	
 	private GokartService service;
 
 	@Override
 	public void start(Stage primaryStage) {
+		context = new ClassPathXmlApplicationContext(new String[] { "spring-beans.xml" });
+		
+		service = (GokartService) context.getBean("gokartService");
+		
 		Label label = new Label("Dani");
 		label.getStyleClass().add("daniLabel");
 
@@ -27,7 +31,7 @@ public class Main extends Application {
 		VBox pane = new VBox();
 		pane.getChildren().addAll(label, table);
 		Scene scene = new Scene(pane, 500, 100, Color.BLACK);
-		scene.getStylesheets().add(Main.class.getResource("style.css").toExternalForm());
+//		scene.getStylesheets().add(Main.class.getResource("style.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Gokart");
 		primaryStage.show();

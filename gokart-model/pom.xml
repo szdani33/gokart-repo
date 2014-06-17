@@ -11,6 +11,7 @@
 		<groupId>hu.daniels</groupId>
 		<artifactId>gokart-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../gokart-parent</relativePath>
 	</parent>
 
 	<properties>
@@ -29,7 +30,7 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-jpamodelgen</artifactId>
@@ -38,6 +39,14 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>META-INF/persistence.xml</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.bsc.maven</groupId>

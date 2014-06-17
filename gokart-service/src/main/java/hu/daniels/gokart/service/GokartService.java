@@ -7,7 +7,7 @@ import hu.daniels.gokart.model.Pilot_;
 import javafx.collections.ObservableList;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -16,11 +16,12 @@ import javax.persistence.criteria.Root;
 
 import com.sun.javafx.collections.ObservableListWrapper;
 
-@SuppressWarnings("restriction")
 public class GokartService {
 
-	private static final String PERSISTENCE_UNIT_NAME = "gokart";
-	private EntityManager em = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME).createEntityManager();
+//	private static final String PERSISTENCE_UNIT_NAME = "emFactory";
+
+	@PersistenceContext(unitName="gokart")
+	private EntityManager em; // = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME).createEntityManager();
 
 	public ObservableList<Heat> loadHeats() {
 		CriteriaBuilder builder = em.getCriteriaBuilder();

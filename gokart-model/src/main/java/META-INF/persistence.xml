@@ -10,10 +10,11 @@
 		<class>hu.daniels.gokart.model.Pilot</class>
 
 		<properties>
-			<property name="javax.persistance.jdbc.driver" value="com.mysql.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/gokart" />
-			<property name="javax.persistence.jdbc.user" value="gokart" />
-			<property name="javax.persistence.jdbc.password" value="G1_gokart_pass" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://127.0.0.1:3306/gokart" />
+			<property name="hibernate.connection.username" value="gokart" />
+			<property name="hibernate.connection.password" value="G1_gokart_pass" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
 		</properties>
 
 	</persistence-unit>
