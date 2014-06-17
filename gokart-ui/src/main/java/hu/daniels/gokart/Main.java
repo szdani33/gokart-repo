@@ -12,14 +12,13 @@ import javafx.stage.Stage;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main extends Application {
-	private ClassPathXmlApplicationContext context = null;
-	
+
+	private ClassPathXmlApplicationContext context;
 	private GokartService service;
 
 	@Override
 	public void start(Stage primaryStage) {
 		context = new ClassPathXmlApplicationContext(new String[] { "spring-beans.xml" });
-		
 		service = (GokartService) context.getBean("gokartService");
 		
 		Label label = new Label("Dani");
@@ -31,7 +30,7 @@ public class Main extends Application {
 		VBox pane = new VBox();
 		pane.getChildren().addAll(label, table);
 		Scene scene = new Scene(pane, 500, 100, Color.BLACK);
-//		scene.getStylesheets().add(Main.class.getResource("style.css").toExternalForm());
+		scene.getStylesheets().add(Main.class.getResource("/style.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Gokart");
 		primaryStage.show();

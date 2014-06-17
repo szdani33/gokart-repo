@@ -16,12 +16,11 @@ import javax.persistence.criteria.Root;
 
 import com.sun.javafx.collections.ObservableListWrapper;
 
+@SuppressWarnings("restriction")
 public class GokartService {
 
-//	private static final String PERSISTENCE_UNIT_NAME = "emFactory";
-
-	@PersistenceContext(unitName="gokart")
-	private EntityManager em; // = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME).createEntityManager();
+	@PersistenceContext(unitName = "gokart")
+	private EntityManager em;
 
 	public ObservableList<Heat> loadHeats() {
 		CriteriaBuilder builder = em.getCriteriaBuilder();
