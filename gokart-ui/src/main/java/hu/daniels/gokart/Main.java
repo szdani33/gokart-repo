@@ -9,13 +9,15 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Main extends Application {
+
+	@Autowired
+	private GokartService service;
 
 	@Override
 	public void start(Stage primaryStage) {
-
-		GokartService service = new GokartService();
-
 		Label label = new Label("Dani");
 		label.getStyleClass().add("daniLabel");
 
