@@ -5,6 +5,9 @@
 
 	<persistence-unit name="gokart" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		
+		<class>hu.daniels.gokart.model.Heat</class>
+		<class>hu.daniels.gokart.model.Pilot</class>
 
 		<properties>
 			<property name="hibernate.connection.url" value="jdbc:mysql://127.0.0.1:3306/gokart" />
