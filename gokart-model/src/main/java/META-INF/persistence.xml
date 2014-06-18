@@ -5,16 +5,8 @@
 
 	<persistence-unit name="gokart" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		
-			<!-- Is this necessary? -->
-<!-- 			<class>hu.daniels.gokart.model.Heat</class> -->
-<!-- 			<class>hu.daniels.gokart.model.Pilot</class> -->
-			<!-- Needed just if the following is true or in Java SE -->
-<!-- 			<exclude-unlisted-classes>true</exclude-unlisted-classes> -->
-
 
 		<properties>
-<!-- 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" /> -->
 			<property name="hibernate.connection.url" value="jdbc:mysql://127.0.0.1:3306/gokart" />
 			<property name="hibernate.connection.username" value="gokart" />
 			<property name="hibernate.connection.password" value="G1_gokart_pass" />
